@@ -1,15 +1,29 @@
 import express from 'express';
 import { createServer } from 'node:http';
 import { Server } from 'socket.io';
+import cors from "cors";
+
 const app = express();
+
 const server = createServer(app);
 const PORT = process.env.PORT || 4000;
+const allowedOrigins = [
+  "https://patient-care-g4nv.onrender.com"
+];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
+    methods: ["GET", "POST"],
+  })
+);
 
 const io = new Server(server, {
-    cors: {
-        origin: "*"
-    }
-})
+  cors: {
+    origin: allowedOrigins,
+    methods: ["GET", "POST"],
+  },
+});
 
 io.on("connection", (socket) => {
     socket.on('form', (msg) => {

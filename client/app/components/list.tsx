@@ -109,7 +109,7 @@ export default function List() {
                                         <label className="border py-1 px-2 rounded-md min-h-8.5">{item.gender === "man" ? "ผู้ชาย" : "ผู้หญิง"}</label>
                                     </div>
 
-                                    <div className="flex flex-col basis-[38%] md:basis-[8%]">
+                                    <div className="flex flex-col basis-[38%] md:basis-[10%]">
                                         <label>เบอร์โทรศัพท์</label>
                                         <label className="border py-1 px-2 rounded-md min-h-8.5">{item.phoneNumber}</label>
                                     </div>
@@ -129,7 +129,7 @@ export default function List() {
                                         <label className="border py-1 px-2 rounded-md min-h-8.5">{item.language}</label>
                                     </div>
 
-                                    <div className="flex flex-col basis-full md:basis-[30%]">
+                                    <div className="flex flex-col basis-full md:basis-[26%]">
                                         <label className="w-10">ที่อยู่</label>
                                         <label className="border py-1 px-2 rounded-md min-h-8.5">{item.address}</label>
                                     </div>

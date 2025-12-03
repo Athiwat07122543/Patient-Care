@@ -2,6 +2,7 @@ import express from 'express';
 import { createServer } from 'node:http';
 import { Server } from 'socket.io';
 import cors from "cors";
+import 'dotenv/config';
 
 const app = express();
 
@@ -29,5 +30,6 @@ io.on("connection", (socket) => {
   })
 })
 server.listen(PORT, () => {
+  console.log(allowedOrigins)
   console.log('server running');
 });
